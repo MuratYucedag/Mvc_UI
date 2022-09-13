@@ -56,6 +56,17 @@
     <Compile Include="Abstract\IGenericDal.cs" />
     <Compile Include="Abstract\IProductDal.cs" />
     <Compile Include="Concrete\Context.cs" />
+    <Compile Include="EntityFramework\EfCategoryDal.cs" />
+    <Compile Include="EntityFramework\EfCustomerDal.cs" />
+    <Compile Include="EntityFramework\EfProductDal.cs" />
+    <Compile Include="Migrations\202209131738188_mig_add_category_status_column.cs" />
+    <Compile Include="Migrations\202209131738188_mig_add_category_status_column.designer.cs">
+      <DependentUpon>202209131738188_mig_add_category_status_column.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202209131746175_mig_add_relation.cs" />
+    <Compile Include="Migrations\202209131746175_mig_add_relation.designer.cs">
+      <DependentUpon>202209131746175_mig_add_relation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\GenericRepository.cs" />
@@ -65,7 +76,12 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="EntityFramework\" />
+    <EmbeddedResource Include="Migrations\202209131738188_mig_add_category_status_column.resx">
+      <DependentUpon>202209131738188_mig_add_category_status_column.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202209131746175_mig_add_relation.resx">
+      <DependentUpon>202209131746175_mig_add_relation.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EntityLayer\EntityLayer.csproj">

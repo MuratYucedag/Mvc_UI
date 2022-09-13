@@ -5,10 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.Abstract
+namespace BusinessLayer.Abstract
 {
-    public interface IProductDal : IGenericDal<Product>
+    public interface IProductService : IGenericService<Product>
     {
-        void ChangeStatusToFalse(int id);
     }
 }

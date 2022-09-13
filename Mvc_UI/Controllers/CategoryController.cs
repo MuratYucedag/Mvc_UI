@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccessLayer.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,11 @@ namespace Mvc_UI.Controllers
 {
     public class CategoryController : Controller
     {
-        // GET: Category
+        Context c = new Context();
         public ActionResult Index()
         {
-            return View();
+            var values = c.Categories.ToList();
+            return View(values);
         }
     }
 }
