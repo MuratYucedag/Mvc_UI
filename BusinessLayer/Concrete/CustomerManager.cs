@@ -34,6 +34,11 @@ namespace BusinessLayer.Concrete
             return _customerDal.GetList();
         }
 
+        public List<Customer> TGetListByTrabzon()
+        {
+            return _customerDal.GetListByTrabzon();
+        }
+
         public void TInsert(Customer item)
         {
             if (item.CustomerSurname.Length <= 5 && item.CustomerName.Length <= 5 && item.CustomerName.Length >= 20)

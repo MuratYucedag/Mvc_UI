@@ -49,5 +49,10 @@ namespace Mvc_UI.Controllers
             customerManager.TUpdate(p);
             return RedirectToAction("Index");
         }
+        public ActionResult GetList2()
+        {
+            var values = customerManager.TGetListByTrabzon();
+            return View(values);
+        }
     }
 }

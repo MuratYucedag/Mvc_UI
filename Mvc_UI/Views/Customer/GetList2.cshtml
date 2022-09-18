@@ -1,0 +1,13 @@
+﻿@using EntityLayer.Concrete
+@model  List<Customer>
+@{
+    ViewBag.Title = "GetList2";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Trabzona Göre Veriler</h2>
+
+@foreach (var item in Model)
+{
+    <p>@item.CustomerName @item.CustomerSurname</p>
+}

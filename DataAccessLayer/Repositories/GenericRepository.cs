@@ -39,6 +39,8 @@ namespace DataAccessLayer.Repositories
             c.SaveChanges();
         }
 
+        //entity state
+        //ninject
         public void Update(T item)
         {
             c.SaveChanges();
