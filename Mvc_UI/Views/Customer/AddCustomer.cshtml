@@ -1,0 +1,24 @@
+﻿@model EntityLayer.Concrete.Customer
+
+@{
+    ViewBag.Title = "AddCustomer";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@*Html Helpers - @Html.Textboxfor *@ 
+
+@*Tag Helplers - Asp-For="ndkjfkjsdkfs"*@
+
+<h2>Yeni Müşteri Ekleme Sayfası</h2>
+<form method="post">
+    <label>Müşteri Adı</label>
+    @Html.TextBoxFor(x => x.CustomerName, new { @class = "form-control" })
+    <br />
+    <label>Müşteri Soyadı</label>
+    @Html.TextBoxFor(x => x.CustomerName, new { @class = "form-control" })
+    <br />
+    <label>Müşteri Şehri</label>
+    <input type="text" name="CustomerCity" class="form-control" />
+    <br />
+    <button class="btn btn-outline-info" onclick="">Müşteriyi Kaydet</button>
+</form>

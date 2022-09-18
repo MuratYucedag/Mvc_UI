@@ -12,12 +12,10 @@ namespace BusinessLayer.Concrete
     public class CategoryManager : ICategoryService
     {
         ICategoryDal _categoryDal;
-
         public CategoryManager(ICategoryDal categoryDal)
         {
             _categoryDal = categoryDal;
         }
-
         public void TChangeToStatusTrue(int id)
         {
             _categoryDal.ChangetoStatusTrue(id);
@@ -40,7 +38,7 @@ namespace BusinessLayer.Concrete
 
         public void TInsert(Category item)
         {
-            throw new NotImplementedException();
+            _categoryDal.Insert(item);
         }
 
         public void TUpdate(Category item)

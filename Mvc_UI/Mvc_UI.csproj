@@ -2263,11 +2263,13 @@
     <Content Include="Templates\AdminLTE-3.0.4\README.md" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\Category\Index.cshtml" />
+    <Content Include="Views\Category\AddCategory.cshtml" />
+    <Content Include="Views\Customer\Index.cshtml" />
+    <Content Include="Views\Customer\AddCustomer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Customer\" />
     <Folder Include="Views\Product\" />
   </ItemGroup>
   <ItemGroup>

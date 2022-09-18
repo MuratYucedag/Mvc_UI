@@ -1,4 +1,7 @@
-﻿using DataAccessLayer.Concrete;
+﻿using BusinessLayer.Concrete;
+using DataAccessLayer.Concrete;
+using DataAccessLayer.EntityFramework;
+using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +12,26 @@ namespace Mvc_UI.Controllers
 {
     public class CategoryController : Controller
     {
-        Context c = new Context();
+        //ninject
+        //Dep. Inj. --> Startup Conf. --> 
+
+        CategoryManager categoryManager = new CategoryManager(new EfCategoryDal());
         public ActionResult Index()
         {
-            var values = c.Categories.ToList();
+            var values = categoryManager.TGetList();
             return View(values);
+        }
+
+        [HttpGet]
+        public ActionResult AddCategory()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AddCategory(Category p)
+        {
+            categoryManager.TInsert(p);
+            return RedirectToAction("Index");
         }
     }
 }
